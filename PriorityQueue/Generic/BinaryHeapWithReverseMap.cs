@@ -60,8 +60,8 @@ namespace Collections.Generic
         { }
         #endregion
 
-        protected override void Assign(int lhs, KeyValuePair<TK,TV> rhs) {
-            base.Assign(lhs,rhs);
+        protected override void AssignToIndex(int lhs, KeyValuePair<TK,TV> rhs) {
+            base.AssignToIndex(lhs,rhs);
             if (_i.ContainsKey(rhs.Key))
             {
                 _reverseMap[rhs.Key] = lhs;
