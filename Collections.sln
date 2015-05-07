@@ -9,11 +9,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.PCL", "Priority
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F70135F-9E97-460D-95FB-B61465D3236C}"
 	ProjectSection(SolutionItems) = preProject
+		Collections.nuspec = Collections.nuspec
 		License.md = License.md
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCollections", "TestCollections\TestCollections.csproj", "{B9156C1B-B55D-4B78-B92F-04269A385901}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C9C1632C-2C2A-4DB5-B825-F16C019372D0}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\copynuget.cmd = Scripts\copynuget.cmd
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

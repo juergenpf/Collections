@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Collections</id>
+        <version>2.0.0</version>
+        <title>Juergen Pfeifer's Collection Library</title>
+        <authors>Juergen Pfeifer</authors>
+        <owners>Juergen Pfeifer</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A library with various collections not covered by the BCL (e.g. BinaryHeap, IPriorityQueue).</description>
+        <copyright>(C) 2004-2015 Juergen Pfeifer. All rights reserved.</copyright>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System" targetFramework="" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="NuGetBuild\Release\lib\net\de\Collections.resources.dll" target="lib\net\de\Collections.resources.dll" />
+        <file src="NuGetBuild\Release\lib\net\Collections.dll" target="lib\net\Collections.dll" />
+        <file src="NuGetBuild\Release\lib\net\Collections.xml" target="lib\net\Collections.xml" />
+        <file src="NuGetBuild\Release\lib\portable-net4+wp7+win8\de\Collections.PCL.resources.dll" target="lib\portable-net4+wp7+win8\de\Collections.PCL.resources.dll" />
+        <file src="NuGetBuild\Release\lib\portable-net4+wp7+win8\Collections.PCL.dll" target="lib\portable-net4+wp7+win8\Collections.PCL.dll" />
+        <file src="NuGetBuild\Release\lib\portable-net4+wp7+win8\Collections.PCL.xml" target="lib\portable-net4+wp7+win8\Collections.PCL.xml" />
+    </files>
+</package>

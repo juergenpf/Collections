@@ -13,9 +13,9 @@ using System.Security.Permissions;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 #if !PCL
-[assembly: AssemblyTitle("Pfeifer.Collections.Generic")]
+[assembly: AssemblyTitle("Collections.Generic")]
 #else
-[assembly: AssemblyTitle("Pfeifer.Collections.Generic.PCL")]
+[assembly: AssemblyTitle("Collections.Generic.PCL")]
 #endif
 [assembly: AssemblyDescription("Generic Collections not provided by the Framework")]
 #if DEBUG
