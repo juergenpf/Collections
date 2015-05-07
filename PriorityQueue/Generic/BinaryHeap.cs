@@ -176,7 +176,12 @@ namespace Collections.Generic
             _heapArr = newS;
         }
 
-        protected virtual void Assign(int lhs, KeyValuePair<TK,TV> rhs) {
+        /// <summary>
+        /// Assign an element to an indexed position in the internal heap array
+        /// </summary>
+        /// <param name="lhs">The index in the heap array</param>
+        /// <param name="rhs">The element to assign</param>
+        protected virtual void AssignToIndex(int lhs, KeyValuePair<TK,TV> rhs) {
             this[lhs] = rhs;
         }
 
@@ -189,7 +194,7 @@ namespace Collections.Generic
             if (IsFull)
                 ExpandHeap();
             Count += 1;
-            Assign(Count, item);
+            AssignToIndex(Count, item);
             PercolateUp(Count);
         }
 
@@ -215,7 +220,7 @@ namespace Collections.Generic
         {
             var root = this[index];
             var x = this[Count];
-            Assign(index, x);
+            AssignToIndex(index, x);
             Count--;
             if (index <= Count)
             {
@@ -252,7 +257,7 @@ namespace Collections.Generic
             var last = this[Count];
             if (--Count > 0)
             {
-                Assign(1, last);
+                AssignToIndex(1, last);
                 PercolateDown(1);
             }
             return root;
@@ -270,14 +275,14 @@ namespace Collections.Generic
                     child++;
                 if (Compare(this[child].Key, tmp.Key) < 0)
                 {
-                    Assign(hole, this[child]);
+                    AssignToIndex(hole, this[child]);
                 }
                 else
                 {
                     break;
                 }
             }
-            Assign(hole, tmp);
+            AssignToIndex(hole, tmp);
         }
 
         private void PercolateUp(int hole)
@@ -285,9 +290,9 @@ namespace Collections.Generic
             var tmp = this[hole];
             for (; hole > 1 && Compare(tmp.Key, this[hole / 2].Key) < 0; hole /= 2)
             {
-                Assign(hole, this[hole / 2]);
+                AssignToIndex(hole, this[hole / 2]);
             }
-            Assign(hole, tmp);
+            AssignToIndex(hole, tmp);
         }
 
         #region IPriorityQueue implementation

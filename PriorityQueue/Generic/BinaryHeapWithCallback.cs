@@ -77,9 +77,9 @@ namespace Collections.Generic
         }
         #endregion
 
-        protected override void Assign(int lhs, KeyValuePair<TK, TV> rhs)
+        protected override void AssignToIndex(int lhs, KeyValuePair<TK, TV> rhs)
         {
-            base.Assign(lhs, rhs);
+            base.AssignToIndex(lhs, rhs);
             // The callback stores the new index back into the value object
             _indexReferencer(rhs.Value, lhs);
         }
