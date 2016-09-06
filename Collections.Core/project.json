@@ -1,0 +1,17 @@
+{
+  "copyright": "Copyright © 2004-2016 by Jürgen Pfeifer. All rights reserved.",
+  "title": "Collections.Generic.Core",
+  "description": "Generic Collections not provided by the Framework",
+  "version": "2.1.0-0",
+  "dependencies": {
+    "NETStandard.Library": "1.6.0"
+  },
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+  "buildOptions": {
+    "define": [ "DNX" ]
+  }
+}

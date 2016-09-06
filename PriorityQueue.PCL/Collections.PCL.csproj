@@ -49,25 +49,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\PriorityQueue\Generic\BinaryHeap.cs">
+    <Compile Include="..\Collections.Core\Generic\BinaryHeap.cs">
       <Link>Generic\BinaryHeap.cs</Link>
     </Compile>
-    <Compile Include="..\PriorityQueue\Generic\BinaryHeapWithCallback.cs">
+    <Compile Include="..\Collections.Core\Generic\BinaryHeapWithCallback.cs">
       <Link>Generic\BinaryHeapWithCallback.cs</Link>
     </Compile>
-    <Compile Include="..\PriorityQueue\Generic\BinaryHeapWithReverseMap.cs">
+    <Compile Include="..\Collections.Core\Generic\BinaryHeapWithReverseMap.cs">
       <Link>Generic\BinaryHeapWithReverseMap.cs</Link>
     </Compile>
-    <Compile Include="..\PriorityQueue\Generic\IPriorityQueue.cs">
+    <Compile Include="..\Collections.Core\Generic\IPriorityQueue.cs">
       <Link>Generic\IPriorityQueue.cs</Link>
     </Compile>
-    <Compile Include="..\PriorityQueue\Generic\IPriorityQueueWithIndexing.cs">
+    <Compile Include="..\Collections.Core\Generic\IPriorityQueueWithIndexing.cs">
       <Link>Generic\IPriorityQueueWithIndexing.cs</Link>
     </Compile>
-    <Compile Include="..\PriorityQueue\Generic\IPriorityQueueWithKeyMapping.cs">
+    <Compile Include="..\Collections.Core\Generic\IPriorityQueueWithKeyMapping.cs">
       <Link>Generic\IPriorityQueueWithKeyMapping.cs</Link>
     </Compile>
-    <Compile Include="..\PriorityQueue\Properties\AssemblyInfo.cs">
+    <Compile Include="..\Collections.Core\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="..\PriorityQueue\Properties\Resources.de.Designer.cs">
