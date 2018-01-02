@@ -29,15 +29,15 @@ using System.Security.Permissions;
 #else
 [assembly: AssemblyConfiguration("Release Version")]
 #endif
-[assembly: AssemblyCompany("Pfeifers Software")]
+[assembly: AssemblyCompany("Pfeifers-Software")]
 [assembly: AssemblyProduct("Pfeifers Collections")]
-[assembly: AssemblyCopyright("Copyright © 2004-2016 by Jürgen Pfeifer. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2004-2018 by Jürgen Pfeifer. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
 
-[assembly: AssemblyVersion("2.1.0.0")]
-[assembly: AssemblyFileVersion("2.1.0.0")]
+[assembly: AssemblyVersion("2.2.0.0")]
+[assembly: AssemblyFileVersion("2.2.0.0")]
 
 [assembly: ComVisible(false)]
 [assembly: System.CLSCompliant(false)]

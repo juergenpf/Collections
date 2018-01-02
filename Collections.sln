@@ -1,12 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "PriorityQueue\Collections.csproj", "{1B6AA1E2-DCFF-40EB-A5A7-5B2E408FD684}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.PCL", "PriorityQueue.PCL\Collections.PCL.csproj", "{983E3C99-F845-431F-9BE6-898F3F52F809}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F70135F-9E97-460D-95FB-B61465D3236C}"
 	ProjectSection(SolutionItems) = preProject
 		Collections.nuspec = Collections.nuspec
@@ -14,14 +10,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCollections", "TestCollections\TestCollections.csproj", "{B9156C1B-B55D-4B78-B92F-04269A385901}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C9C1632C-2C2A-4DB5-B825-F16C019372D0}"
 	ProjectSection(SolutionItems) = preProject
 		Scripts\copynuget.cmd = Scripts\copynuget.cmd
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Collections.Core", "Collections.Core\Collections.Core.xproj", "{97949C52-4BFD-4D6F-87F1-4B737C22DC25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "PriorityQueue\Collections.csproj", "{1B6AA1E2-DCFF-40EB-A5A7-5B2E408FD684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.PCL", "PriorityQueue.PCL\Collections.PCL.csproj", "{983E3C99-F845-431F-9BE6-898F3F52F809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCollections", "TestCollections\TestCollections.csproj", "{B9156C1B-B55D-4B78-B92F-04269A385901}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections.Core", "Collections.Core\Collections.Core.csproj", "{97949C52-4BFD-4D6F-87F1-4B737C22DC25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,5 +48,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC769C11-5D7F-42E6-9879-D9C25B3DF0B8}
 	EndGlobalSection
 EndGlobal

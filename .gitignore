@@ -236,3 +236,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+.vs/restore.dg
+/.vs/Collections/v15/Server/sqlite3/db.lock

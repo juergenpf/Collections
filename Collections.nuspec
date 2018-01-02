@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
       <id>Collections</id>
-      <version>2.1.0</version>
+      <version>2.2.0</version>
       <title>Juergen Pfeifer's Library with additional Collections</title>
       <authors>Jürgen Pfeifer</authors>
       <owners>Jürgen Pfeifer</owners>
@@ -14,7 +14,7 @@
           a BinaryHeap implementation with various variations, and based on that
           an implementation of a PriorityQueue.
       </description>
-      <copyright>(C) 2004-2016 Juergen Pfeifer. All rights reserved.</copyright>
+      <copyright>(C) 2004-2018 Juergen Pfeifer. All rights reserved.</copyright>
       <projectUrl>https://github.com/juergenpf/Collections</projectUrl>
         <licenseUrl>https://github.com/juergenpf/Collections/blob/master/License.md</licenseUrl>
         <tags>Collections BinaryHeap PriorityQueue</tags>
