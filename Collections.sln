@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C9C1
 		Scripts\copynuget.cmd = Scripts\copynuget.cmd
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "PriorityQueue\Collections.csproj", "{1B6AA1E2-DCFF-40EB-A5A7-5B2E408FD684}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{1B6AA1E2-DCFF-40EB-A5A7-5B2E408FD684}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCollections", "TestCollections\TestCollections.csproj", "{B9156C1B-B55D-4B78-B92F-04269A385901}"
 EndProject
