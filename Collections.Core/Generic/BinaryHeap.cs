@@ -66,7 +66,7 @@ namespace Collections.Generic
         {
             if (capacity < MinimumCapacity)
             {
-                throw new ArgumentOutOfRangeException(Properties.Resources.INVALID_CAPACITY);
+                throw new ArgumentOutOfRangeException(Properties.Resource.INVALID_CAPACITY);
             }
             _sortOrder = sortOrder;
             Count     = 0;
@@ -92,9 +92,9 @@ namespace Collections.Generic
         private void ValidateIndex(int index)
         {
             if (Count==0)
-                throw new KeyNotFoundException(Properties.Resources.EMPTY_HEAP);
+                throw new KeyNotFoundException(Properties.Resource.EMPTY_HEAP);
             if (index < 1 || index > Count)
-                throw new IndexOutOfRangeException(Properties.Resources.ELEMENT_NOT_FOUND);
+                throw new IndexOutOfRangeException(Properties.Resource.ELEMENT_NOT_FOUND);
         }
 
         /// <summary>

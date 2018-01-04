@@ -2,10 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
       <id>Collections</id>
-      <version>3.0.0</version>
+      <version>3.0.1</version>
       <title>Juergen Pfeifer's Library with additional Collections</title>
       <authors>juergenpf</authors>
       <owners>juergenpf</owners>
+      <product>Pfeifers Collections</product>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <summary>A library with various collections not covered by the BCL (e.g. BinaryHeap, IPriorityQueue).</summary>
       <description>
@@ -14,7 +15,7 @@ not covered by the .NET base class library. At the moment this is just
 a BinaryHeap implementation with various variations, and based on that
 an implementation of a PriorityQueue.
       </description>
-      <copyright>(C) 2004-2018 Juergen Pfeifer. All rights reserved.</copyright>
+      <copyright>Copyright © 2004-2018 by Jürgen Pfeifer. All rights reserved.</copyright>
       <projectUrl>https://github.com/juergenpf/Collections</projectUrl>
       <licenseUrl>https://github.com/juergenpf/Collections/blob/master/License.md</licenseUrl>
       <tags>Collections BinaryHeap PriorityQueue</tags>

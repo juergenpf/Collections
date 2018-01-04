@@ -61,7 +61,7 @@
     <Compile Include="TestValueClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PriorityQueue\Collections.csproj">
+    <ProjectReference Include="..\Collections\Collections.csproj">
       <Project>{1b6aa1e2-dcff-40eb-a5a7-5b2e408fd684}</Project>
       <Name>Collections</Name>
     </ProjectReference>

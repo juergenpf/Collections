@@ -95,23 +95,11 @@
     <Compile Include="..\Collections.Core\Generic\IPriorityQueueWithKeyMapping.cs">
       <Link>Generic\IPriorityQueueWithKeyMapping.cs</Link>
     </Compile>
-    <Compile Include="..\Collections.Core\Properties\AssemblyInfo.cs">
-      <Link>Properties\AssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.de.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <AppDesigner Include="Properties\" />
+    <Compile Include="..\Collections.Core\Properties\Resource.Designer.cs">
+      <Link>Properties\Resource.Designer.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

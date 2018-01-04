@@ -26,8 +26,8 @@ using System.Security.Permissions;
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
 
-[assembly: AssemblyVersion("3.0.0.0")]
-[assembly: AssemblyFileVersion("3.0.0.0")]
+[assembly: AssemblyVersion("3.0.1.0")]
+[assembly: AssemblyFileVersion("3.0.1.0")]
 
 [assembly: ComVisible(false)]
 [assembly: System.CLSCompliant(false)]

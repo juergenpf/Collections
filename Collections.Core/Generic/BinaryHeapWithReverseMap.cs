@@ -78,7 +78,7 @@ namespace Collections.Generic
         public override void Add(KeyValuePair<TK, TV> item)
         {
             if (_reverseMap.ContainsKey(item.Key))
-                throw new InvalidOperationException(Properties.Resources.DUPLICATE_KEY);
+                throw new InvalidOperationException(Properties.Resource.DUPLICATE_KEY);
             base.Add(item);
         }
 
@@ -128,7 +128,7 @@ namespace Collections.Generic
         public int Index(TK key)
         {
             if (!_reverseMap.ContainsKey(key))
-                throw new KeyNotFoundException(Properties.Resources.KEY_NOT_FOUND);
+                throw new KeyNotFoundException(Properties.Resource.KEY_NOT_FOUND);
             return _reverseMap[key];
         }
 
