@@ -96,12 +96,10 @@
       <Link>Generic\IPriorityQueueWithKeyMapping.cs</Link>
     </Compile>
     <AppDesigner Include="Properties\" />
-    <Compile Include="..\Collections.Core\Properties\AssemblyInfo.cs">
-      <Link>Properties\AssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="..\Collections.Core\Properties\Resource.Designer.cs">
       <Link>Properties\Resource.Designer.cs</Link>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

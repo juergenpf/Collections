@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
       <id>Collections</id>
-      <version>3.0.3</version>
+      <version>3.0.4</version>
       <title>Juergen Pfeifer's Library with additional Collections</title>
       <authors>juergenpf</authors>
       <owners>juergenpf</owners>
