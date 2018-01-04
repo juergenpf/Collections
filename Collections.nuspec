@@ -6,7 +6,6 @@
       <title>Juergen Pfeifer's Library with additional Collections</title>
       <authors>juergenpf</authors>
       <owners>juergenpf</owners>
-      <product>Pfeifers Collections</product>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <summary>A library with various collections not covered by the BCL (e.g. BinaryHeap, IPriorityQueue).</summary>
       <description>
