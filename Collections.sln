@@ -17,8 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C9C1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "PriorityQueue\Collections.csproj", "{1B6AA1E2-DCFF-40EB-A5A7-5B2E408FD684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.PCL", "PriorityQueue.PCL\Collections.PCL.csproj", "{983E3C99-F845-431F-9BE6-898F3F52F809}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCollections", "TestCollections\TestCollections.csproj", "{B9156C1B-B55D-4B78-B92F-04269A385901}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections.Core", "Collections.Core\Collections.Core.csproj", "{97949C52-4BFD-4D6F-87F1-4B737C22DC25}"
@@ -33,10 +31,6 @@ Global
 		{1B6AA1E2-DCFF-40EB-A5A7-5B2E408FD684}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B6AA1E2-DCFF-40EB-A5A7-5B2E408FD684}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B6AA1E2-DCFF-40EB-A5A7-5B2E408FD684}.Release|Any CPU.Build.0 = Release|Any CPU
-		{983E3C99-F845-431F-9BE6-898F3F52F809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{983E3C99-F845-431F-9BE6-898F3F52F809}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{983E3C99-F845-431F-9BE6-898F3F52F809}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{983E3C99-F845-431F-9BE6-898F3F52F809}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B9156C1B-B55D-4B78-B92F-04269A385901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B9156C1B-B55D-4B78-B92F-04269A385901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9156C1B-B55D-4B78-B92F-04269A385901}.Release|Any CPU.ActiveCfg = Release|Any CPU

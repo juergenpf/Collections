@@ -5,25 +5,15 @@
 using System.Resources;
 using System.Reflection;
 using System.Runtime.InteropServices;
-#if !PCL
 #if !DNX
 using System.Security.Permissions;
-#endif
 #endif
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-#if !PCL
-#if DNX
-[assembly: AssemblyTitle("Collections.Generic.Core")]
-#else
 [assembly: AssemblyTitle("Collections.Generic")]
-#endif
-#else
-[assembly: AssemblyTitle("Collections.Generic.PCL")]
-#endif
-[assembly: AssemblyDescription("Generic Collections not provided by the Framework")]
+[assembly: AssemblyDescription("This are C# class libraries that implements generic collections that are \r\nnot covered by the .NET base class library. At the moment this is just\r\na BinaryHeap implementation with various variations, and based on that\r\nan implementation of a PriorityQueue.")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug Version")]
 #else
@@ -36,8 +26,8 @@ using System.Security.Permissions;
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
 
-[assembly: AssemblyVersion("2.2.0.0")]
-[assembly: AssemblyFileVersion("2.2.0.0")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.0.0")]
 
 [assembly: ComVisible(false)]
 [assembly: System.CLSCompliant(false)]

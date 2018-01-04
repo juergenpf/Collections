@@ -148,7 +148,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <PropertyGroup>
     <PostBuildEvent>PUSHD "$(SolutionDir)"
-  CALL .\Scripts\copynuget  "$(ConfigurationName)" "$(TargetDir)" "$(TargetName)" "$(TargetExt)" "net"
+  CALL .\Scripts\copynuget  "$(ConfigurationName)" "$(TargetDir)" "$(TargetName)" "$(TargetExt)" "net45"
 POPD
 </PostBuildEvent>
   </PropertyGroup>

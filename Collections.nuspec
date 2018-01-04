@@ -2,32 +2,35 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
       <id>Collections</id>
-      <version>2.2.0</version>
+      <version>3.0.0</version>
       <title>Juergen Pfeifer's Library with additional Collections</title>
-      <authors>Jürgen Pfeifer</authors>
-      <owners>Jürgen Pfeifer</owners>
+      <authors>juergenpf</authors>
+      <owners>juergenpf</owners>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <summary>A library with various collections not covered by the BCL (e.g. BinaryHeap, IPriorityQueue).</summary>
       <description>
-          This are C# class libraries that implements generic collections that are 
-          not covered by the .NET base class library. At the moment this is just
-          a BinaryHeap implementation with various variations, and based on that
-          an implementation of a PriorityQueue.
+This are C# class libraries that implements generic collections that are 
+not covered by the .NET base class library. At the moment this is just
+a BinaryHeap implementation with various variations, and based on that
+an implementation of a PriorityQueue.
       </description>
       <copyright>(C) 2004-2018 Juergen Pfeifer. All rights reserved.</copyright>
       <projectUrl>https://github.com/juergenpf/Collections</projectUrl>
-        <licenseUrl>https://github.com/juergenpf/Collections/blob/master/License.md</licenseUrl>
-        <tags>Collections BinaryHeap PriorityQueue</tags>
-        <frameworkAssemblies>
+      <licenseUrl>https://github.com/juergenpf/Collections/blob/master/License.md</licenseUrl>
+      <tags>Collections BinaryHeap PriorityQueue</tags>
+      <frameworkAssemblies>
             <frameworkAssembly assemblyName="System" targetFramework="" />
-        </frameworkAssemblies>
+      </frameworkAssemblies>
+      <releaseNotes>
+Version 3 drops PCL builds in favour of .NET standard
+      </releaseNotes>
     </metadata>
     <files>
-        <file src="NuGetBuild\Release\lib\net\de\Collections.resources.dll" target="lib\net\de\Collections.resources.dll" />
-        <file src="NuGetBuild\Release\lib\net\Collections.dll" target="lib\net\Collections.dll" />
-        <file src="NuGetBuild\Release\lib\net\Collections.xml" target="lib\net\Collections.xml" />
-        <file src="NuGetBuild\Release\lib\portable-net4+wp7+win8\de\Collections.PCL.resources.dll" target="lib\portable-net4+wp7+win8\de\Collections.PCL.resources.dll" />
-        <file src="NuGetBuild\Release\lib\portable-net4+wp7+win8\Collections.PCL.dll" target="lib\portable-net4+wp7+win8\Collections.PCL.dll" />
-        <file src="NuGetBuild\Release\lib\portable-net4+wp7+win8\Collections.PCL.xml" target="lib\portable-net4+wp7+win8\Collections.PCL.xml" />
+        <file src="NuGetBuild\Release\lib\net45\de\Collections.resources.dll" target="lib\net45\de\Collections.resources.dll" />
+        <file src="NuGetBuild\Release\lib\net45\Collections.dll" target="lib\net45\Collections.dll" />
+        <file src="NuGetBuild\Release\lib\net45\Collections.xml" target="lib\net45\Collections.xml" />
+        <file src="NuGetBuild\Release\lib\netstandard2.0\de\Collections.resources.dll" target="lib\netstandard2.0\de\Collections.resources.dll" />
+        <file src="NuGetBuild\Release\lib\netstandard2.0\Collections.dll" target="lib\netstandard2.0\Collections.dll" />
+        <file src="NuGetBuild\Release\lib\netstandard2.0\Collections.xml" target="lib\netstandard2.0\Collections.xml" />
     </files>
 </package>

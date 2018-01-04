@@ -34,6 +34,4 @@ FOR %%%l IN (bg bg-bg cs cs-cz da da-dk de de-de el el-gr en en-gb en-us es es-e
   )
 )
 
-nuget.exe pack -IncludeReferencedProjects -properties Configuration=%1
-
 EXIT /B 0
