@@ -21,7 +21,7 @@
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <RootNamespace>Collections</RootNamespace>
-    <Version>3.0.1</Version>
+    <Version>3.0.2</Version>
     <PackageLicenseUrl>https://github.com/juergenpf/Collections/blob/master/License.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/juergenpf/Collections</PackageProjectUrl>
     <RepositoryUrl>https://github.com/juergenpf/Collections.git</RepositoryUrl>

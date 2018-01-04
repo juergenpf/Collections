@@ -133,6 +133,11 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Collections.Core\Properties\Resource.resx">
+      <Link>Properties\Resource.resx</Link>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <PropertyGroup>
     <PostBuildEvent>PUSHD "$(SolutionDir)"
