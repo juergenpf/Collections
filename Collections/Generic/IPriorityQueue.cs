@@ -8,7 +8,7 @@ namespace Collections.Generic
 {
     /// <summary>
     /// The Interface to a priority queue. That is a queue where the elements are maintained in a way,
-    /// that always the one with the smalles/largest (depending on the sort order) value is on the 
+    /// that always the one with the smallest/largest (depending on the sort order) value is on the 
     /// head of the queue.
     /// </summary>
     /// <typeparam name="TK">The key type to use. Must implement IComparable`TK</typeparam>

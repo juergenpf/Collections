@@ -137,21 +137,13 @@ namespace Collections.Generic
         /// Is this heap empty?
         /// </summary>
         /// <value>True if the heap is empty, False otherwise.</value>
-        public bool IsEmpty
-        {
-            get
-            {
-                return (Count == 0);
-            }
-        }
+        public bool IsEmpty => (Count == 0);
 
-        private bool IsFull
-        {
-            get
-            {
-                return (Count == _capacity);
-            }
-        }
+        /// <summary>
+        /// Is this heap full?
+        /// </summary>
+        /// <value>True if the heap is full, False otherwise.</value>
+        private bool IsFull => (Count == _capacity);
 
         /// <summary>
         /// Get the first element from the heap but don't remove it.
@@ -159,13 +151,7 @@ namespace Collections.Generic
         /// <exception cref="KeyNotFoundException">May be thrown if the heap is empty</exception>
         /// <exception cref="IndexOutOfRangeException">May be thrown if the heap is empty</exception>
         /// <value>The smallest or largest element in the heap, depending on the sort order.</value>
-        public KeyValuePair<TK, TV> Peek
-        {
-            get
-            {
-                return this[1];
-            }
-        }
+        public KeyValuePair<TK, TV> Peek => this[1];
 
         private void ExpandHeap()
         {

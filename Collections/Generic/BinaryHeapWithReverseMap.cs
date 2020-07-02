@@ -7,11 +7,11 @@ using System.Collections.Generic;
 namespace Collections.Generic
 {
     /// <summary>
-    /// This is a conveniance class where in the heap we maintain a dictionary to map the
+    /// This is a convenience class where in the heap we maintain a dictionary to map the
     /// keys to their internal index values. Because this dictionary needs ro be maintained,
     /// the implementation is less efficient than the base class. It also means, that the
     /// queue can also contain a key only once.
-    /// But we get some conveniance without any assumptions for the TV value class like with
+    /// But we get some convenience without any assumptions for the TV value class like with
     /// the BinaryHeapWithCallback class.
     /// </summary>
     /// <typeparam name="TK">The type of the key, must implement IComparable`TK</typeparam>
@@ -89,13 +89,7 @@ namespace Collections.Generic
         /// <exception cref="IndexOutOfRangeException">May be thrown if the heap is empty.</exception>
         /// <exception cref="KeyNotFoundException">May be thrown if the heap is empty.</exception>
         /// <returns>The element belonging to this key</returns>
-        public TV this[TK key]
-        {
-            get
-            {
-                return base[_i.Index(key)].Value;
-            }
-        }
+        public TV this[TK key] => base[_i.Index(key)].Value;
 
         /// <summary>
         /// RemoveByIndex all elements from the heap.

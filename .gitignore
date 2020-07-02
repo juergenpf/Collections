@@ -27,6 +27,9 @@ bld/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+# VisualStudio Files
+.vs/
+
 #NUNIT
 *.VisualState.xml
 TestResult.xml
