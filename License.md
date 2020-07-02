@@ -24,5 +24,5 @@
  sale, use or other dealings in this Software without prior written
  authorization.
 
- Author : Jürgen Pfeifer
+ Author : Juergen Pfeifer
  Contact: juergen@familiepfeifer.de

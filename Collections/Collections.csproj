@@ -23,7 +23,7 @@ an implementation of a PriorityQueue.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\juergen\Source\Repos\Collections\Collections.NET\Collections.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\juergen\Source\Repos\Collections\Collections\Collections.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
