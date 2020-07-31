@@ -77,6 +77,7 @@ namespace Collections.Generic
         }
         #endregion
 
+        /// <inheritdoc/>
         protected override void AssignToIndex(int lhs, KeyValuePair<TK, TV> rhs)
         {
             base.AssignToIndex(lhs, rhs);
@@ -112,7 +113,7 @@ namespace Collections.Generic
         }
 
         /// <summary>
-        /// Change the key of an element on the heap. 
+        /// Change the key of an element on the heap.
         /// </summary>
         /// <param name="index">The index of the element in the heap</param>
         /// <param name="newPriority">The new key</param>

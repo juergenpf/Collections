@@ -242,3 +242,5 @@ $RECYCLE.BIN/
 
 # Visual Studio Work files
 .vs/
+
+.idea/

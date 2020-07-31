@@ -33,8 +33,17 @@ namespace Collections.Generic
         where TK : IComparable<TK>
     {
         #region Constants for the implementation
+        /// <summary>
+        /// The default capacity of a <see cref="BinaryHeap{TK,TV}"/>.
+        /// </summary>
         protected const int DefaultCapacity = 64;
+        /// <summary>
+        /// The default <see cref="SortOrder"/> of a <see cref="BinaryHeap{TK,TV}"/>.
+        /// </summary>
         protected const SortOrder DefaultSortOrder = SortOrder.Ascending;
+        /// <summary>
+        /// The minimum capacity of a <see cref="BinaryHeap{TK,TV}"/>.
+        /// </summary>
         protected const int MinimumCapacity = 2;
         #endregion
 
@@ -282,17 +291,19 @@ namespace Collections.Generic
         }
 
         #region IPriorityQueue implementation
+        /// <inheritdoc/>
         public void ChangePriority(TK priority)
         {
-            Add(priority, Remove().Value);            
+            Add(priority, Remove().Value);
         }
 
-
+        /// <inheritdoc/>
         public void Enqueue(TK key, TV value)
         {
             Add(key,value);
         }
 
+        /// <inheritdoc/>
         public KeyValuePair<TK, TV> Dequeue()
         {
             return Remove();

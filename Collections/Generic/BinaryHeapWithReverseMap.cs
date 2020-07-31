@@ -16,13 +16,13 @@ namespace Collections.Generic
     /// </summary>
     /// <typeparam name="TK">The type of the key, must implement IComparable`TK</typeparam>
     /// <typeparam name="TV">The type of the elements to store</typeparam>
-    public class BinaryHeapWithReverseMap<TK, TV> : 
-        BinaryHeap<TK, TV>, IPriorityQueueWithKeyMapping<TK,TV> 
+    public class BinaryHeapWithReverseMap<TK, TV> :
+        BinaryHeap<TK, TV>, IPriorityQueueWithKeyMapping<TK,TV>
         where TK : IComparable<TK>
     {
         private readonly Dictionary<TK, int> _reverseMap;         // reverse mapping into the heap
         private readonly IPriorityQueueWithKeyMapping<TK, TV> _i; // Myself as an interface
-        private readonly IPriorityQueueWithIndexing<TK, TV> _ii;  // Myself as the base interface 
+        private readonly IPriorityQueueWithIndexing<TK, TV> _ii;  // Myself as the base interface
 
         #region Constructors
         /// <summary>
@@ -60,6 +60,7 @@ namespace Collections.Generic
         { }
         #endregion
 
+        /// <inheritdoc/>
         protected override void AssignToIndex(int lhs, KeyValuePair<TK,TV> rhs) {
             base.AssignToIndex(lhs,rhs);
             if (_i.ContainsKey(rhs.Key))
@@ -114,11 +115,13 @@ namespace Collections.Generic
 
 
         #region Implementation of IPriorityQueueWithKeyMapping
+        /// <inheritdoc/>
         public bool ContainsKey(TK key)
         {
             return _reverseMap.ContainsKey(key);
         }
 
+        /// <inheritdoc/>
         public int Index(TK key)
         {
             if (!_reverseMap.ContainsKey(key))
