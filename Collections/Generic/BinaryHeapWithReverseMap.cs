@@ -21,8 +21,6 @@ namespace Collections.Generic
         where TK : IComparable<TK>
     {
         private readonly Dictionary<TK, int> _reverseMap;         // reverse mapping into the heap
-        private readonly IPriorityQueueWithKeyMapping<TK, TV> _i; // Myself as an interface
-        private readonly IPriorityQueueWithIndexing<TK, TV> _ii;  // Myself as the base interface
 
         #region Constructors
         /// <summary>
@@ -47,8 +45,6 @@ namespace Collections.Generic
         public BinaryHeapWithReverseMap(SortOrder sortOrder, int capacity) : base(sortOrder,capacity)
         {
             _reverseMap = new Dictionary<TK, int>();
-            _i = (IPriorityQueueWithKeyMapping<TK, TV>) this;
-            _ii = (IPriorityQueueWithIndexing<TK, TV>) this;
         }
 
         /// <summary>
@@ -63,7 +59,7 @@ namespace Collections.Generic
         /// <inheritdoc/>
         protected override void AssignToIndex(int lhs, KeyValuePair<TK,TV> rhs) {
             base.AssignToIndex(lhs,rhs);
-            if (_i.ContainsKey(rhs.Key))
+            if (ContainsKey(rhs.Key))
             {
                 _reverseMap[rhs.Key] = lhs;
             }
@@ -90,7 +86,7 @@ namespace Collections.Generic
         /// <exception cref="IndexOutOfRangeException">May be thrown if the heap is empty.</exception>
         /// <exception cref="KeyNotFoundException">May be thrown if the heap is empty.</exception>
         /// <returns>The element belonging to this key</returns>
-        public TV this[TK key] => base[_i.Index(key)].Value;
+        public TV this[TK key] => base[Index(key)].Value;
 
         /// <summary>
         /// RemoveByIndex all elements from the heap.
@@ -110,9 +106,8 @@ namespace Collections.Generic
         /// <returns>The removed element</returns>
         public KeyValuePair<TK, TV> Remove(TK key)
         {
-            return _i.Dequeue(key);
+            return ((IPriorityQueueWithKeyMapping<TK,TV>) this).Dequeue(key);
         }
-
 
         #region Implementation of IPriorityQueueWithKeyMapping
         /// <inheritdoc/>
@@ -131,12 +126,12 @@ namespace Collections.Generic
 
         KeyValuePair<TK, TV> IPriorityQueueWithKeyMapping<TK, TV>.Dequeue(TK key)
         {
-            return RemoveByIndex(_i.Index(key));
+            return RemoveByIndex(Index(key));
         }
 
         void IPriorityQueueWithKeyMapping<TK, TV>.ChangePriority(TK oldKey, TK newKey)
         {
-            Add(newKey,RemoveByIndex(_i.Index(oldKey)).Value);
+            Add(newKey,RemoveByIndex(Index(oldKey)).Value);
         }
 
         #endregion

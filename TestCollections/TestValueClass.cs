@@ -18,7 +18,7 @@ namespace TestCollections
 
         public static implicit operator TestValueClass(string s)
         {
-            return new TestValueClass() {index = -1, value = s};
+            return new TestValueClass {index = -1, value = s};
         }
     }
 }

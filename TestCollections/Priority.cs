@@ -1,4 +1,4 @@
-﻿/* See License.md in the solution root for license information.
+/* See License.md in the solution root for license information.
  * File: Priority.cs
 */
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -54,8 +54,7 @@ namespace TestCollections
         public void TestIndexedPriorityChange()
         {
             var o = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             Assert.IsNotNull(o);
             o.Add(2,"B");
             o.Add(1,"A");
@@ -68,8 +67,7 @@ namespace TestCollections
         public void TestIndexerChangePrioInterface()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             Assert.IsNotNull(o1);
             var I = (IPriorityQueueWithIndexing<int, TestValueClass>)o1;
             Assert.IsNotNull(I);

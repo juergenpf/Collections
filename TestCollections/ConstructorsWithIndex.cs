@@ -1,4 +1,4 @@
-﻿/* See License.md in the solution root for license information.
+/* See License.md in the solution root for license information.
  * File: ConstructorsWithIndex.cs
 */
 using System;
@@ -14,8 +14,7 @@ namespace TestCollections
         public void TestDefaultConstructor()
         {
             var o = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             Assert.IsNotNull(o);
         }
 
@@ -24,16 +23,14 @@ namespace TestCollections
         public void InvalidCapacity()
         {
             var o = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback),1);
+                TestValueClass.Callback,1);
         }
 
         [TestMethod]
         public void TestConstructorSortAndCapacity()
         {
             var o = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback), SortOrder.Descending, 1000);
+                TestValueClass.Callback, SortOrder.Descending, 1000);
             Assert.IsNotNull(o);
         }
 
@@ -42,16 +39,14 @@ namespace TestCollections
         public void InvalidCapacity2()
         {
             var o = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback), SortOrder.Ascending, 0);
+                TestValueClass.Callback, SortOrder.Ascending, 0);
         }
 
         [TestMethod]
         public void TestConstructorSort()
         {
             var o = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback), SortOrder.Ascending);
+                TestValueClass.Callback, SortOrder.Ascending);
             Assert.IsNotNull(o);
         }
     }

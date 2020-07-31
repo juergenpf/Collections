@@ -30,11 +30,6 @@ namespace Collections.Generic
         #region Constructors
         private readonly IndexReferencer _indexReferencer; // The callback to reference the index in the heap
 
-        // We hide the default constructor
-        private BinaryHeapWithCallback()
-        {
-        }
-
         /// <summary>
         /// Create a heap with a default capacity and ascending sort order.
         /// </summary>

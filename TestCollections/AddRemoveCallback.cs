@@ -1,4 +1,4 @@
-﻿/* See License.md in the solution root for license information.
+/* See License.md in the solution root for license information.
  * File: AddRemoveCallback.cs
 */
 using System;
@@ -15,8 +15,7 @@ namespace TestCollections
         public void TestAdd()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback),SortOrder.Ascending,10);
+                TestValueClass.Callback,SortOrder.Ascending,10);
             Assert.IsNotNull(o1);
             o1.Add(1,"A");
             o1.Add(2,"A");
@@ -37,8 +36,7 @@ namespace TestCollections
         public void TestReverseAdd()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback),SortOrder.Ascending,10);
+                TestValueClass.Callback,SortOrder.Ascending,10);
             Assert.IsNotNull(o1);
             o1.Add(2, "A");
             o1.Add(1, "A");
@@ -59,8 +57,7 @@ namespace TestCollections
         public void TestAddDescending()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback),SortOrder.Descending,10);
+                TestValueClass.Callback,SortOrder.Descending,10);
             Assert.IsNotNull(o1);
             o1.Add(1, "A");
             o1.Add(2, "A");
@@ -81,8 +78,7 @@ namespace TestCollections
         public void TestAddReverseDescending()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback),SortOrder.Descending,10);
+                TestValueClass.Callback,SortOrder.Descending,10);
             Assert.IsNotNull(o1);
             o1.Add(2, "A");
             o1.Add(1, "A");
@@ -103,8 +99,7 @@ namespace TestCollections
         public void TestRemoveFromTheMiddle()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             Assert.IsNotNull(o1);
             o1.Add(3,"C");
             o1.Add(2,"B");
@@ -123,8 +118,7 @@ namespace TestCollections
         public void TestRemoveFromEmpty()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             var pick = o1.Remove();
         }
 
@@ -132,8 +126,7 @@ namespace TestCollections
         public void TestRemoveFromInside()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback),SortOrder.Descending);
+                TestValueClass.Callback,SortOrder.Descending);
             Assert.IsNotNull(o1);
             const string letters = "ABCDEFGHIJ";
             for (int i = 0; i < letters.Length; i++)
@@ -150,8 +143,7 @@ namespace TestCollections
         public void TestRemoveFromInsideWithNonExistentKey()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             Assert.IsNotNull(o1);
             const string letters = "ABCDEFGHIJ";
             for (int i = 0; i < letters.Length; i++)
@@ -165,8 +157,7 @@ namespace TestCollections
         public void RemoveFromLongerQ()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback),SortOrder.Descending);
+                TestValueClass.Callback,SortOrder.Descending);
             Assert.IsNotNull(o1);
             const string letters = "ABCDEFGHIJ";
             for (int i = 0; i < letters.Length; i++)
@@ -182,8 +173,7 @@ namespace TestCollections
         public void TestClear()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             Assert.IsNotNull(o1);
             o1.Add(1,"A");
             o1.Add(2,"B");
@@ -195,8 +185,7 @@ namespace TestCollections
         public void TestUseAfterClear()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             Assert.IsNotNull(o1);
             o1.Add(1, "A");
             o1.Add(2, "B");
@@ -212,8 +201,7 @@ namespace TestCollections
         public void TestGet()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback), SortOrder.Descending);
+                TestValueClass.Callback, SortOrder.Descending);
             Assert.IsNotNull(o1);
             o1.Add(1, "A");
             o1.Add(2, "B");
@@ -225,8 +213,7 @@ namespace TestCollections
         public void TestIndexer()
         {
             var o1 = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback), SortOrder.Descending);
+                TestValueClass.Callback, SortOrder.Descending);
             Assert.IsNotNull(o1);
             var I = (IPriorityQueueWithIndexing<int, TestValueClass>) o1;
             Assert.IsNotNull(I);
@@ -240,8 +227,7 @@ namespace TestCollections
         public void TestSimpleEnqueueDequeue()
         {
             var o = new BinaryHeapWithCallback<int, TestValueClass>(
-                new BinaryHeapWithCallback<int, TestValueClass>.IndexReferencer(
-                    TestValueClass.Callback));
+                TestValueClass.Callback);
             Assert.IsNotNull(o);
             var I = (IPriorityQueueWithIndexing<int, TestValueClass>)o;
             Assert.IsNotNull(I);
