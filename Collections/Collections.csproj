@@ -32,11 +32,6 @@ an implementation of a PriorityQueue.</Description>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Update="Properties\Resource.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
