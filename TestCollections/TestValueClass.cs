@@ -5,20 +5,17 @@ namespace TestCollections
 {
     public class TestValueClass
     {
-        public int index { get; set; }
-        public string value { get; set; }
+        public int Index { get; private set; }
+        public string Value { get; set; }
 
         public static int Callback(TestValueClass v, int newIndex)
         {
-            int old = v.index;
+            var old = v.Index;
             if (newIndex >= 0)
-                v.index = newIndex;
+                v.Index = newIndex;
             return old;
         }
 
-        public static implicit operator TestValueClass(string s)
-        {
-            return new TestValueClass {index = -1, value = s};
-        }
+        public static implicit operator TestValueClass(string s) => new TestValueClass {Index = -1, Value = s};
     }
 }

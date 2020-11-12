@@ -30,19 +30,13 @@ namespace Collections.Generic
         { }
 
         /// <summary>
-        /// Create a new heap with the specified sort order and default capacity.
-        /// </summary>
-        /// <param name="sortOrder">The sort order (Ascending or Descending)</param>
-        public BinaryHeapWithReverseMap(SortOrder sortOrder) : this(sortOrder, DefaultCapacity)
-        { }
-
-        /// <summary>
         /// Create a new heap with the specified capacity and sort order.
         /// </summary>
         /// <param name="sortOrder">The sort order (Ascending or Descending)</param>
         /// <param name="capacity"></param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown if the capacity is less than 2.</exception>
-        public BinaryHeapWithReverseMap(SortOrder sortOrder, int capacity) : base(sortOrder,capacity)
+        public BinaryHeapWithReverseMap(SortOrder sortOrder, int capacity = DefaultCapacity) 
+            : base(sortOrder,capacity)
         {
             _reverseMap = new Dictionary<TK, int>();
         }
@@ -72,7 +66,7 @@ namespace Collections.Generic
         /// </summary>
         /// <param name="item">The KeyValuePair to add to the heap.</param>
         /// <exception cref="InvalidOperationException">May be thrown if the key is duplicate.</exception>
-        public override void Add(KeyValuePair<TK, TV> item)
+        protected override void Add(KeyValuePair<TK, TV> item)
         {
             if (_reverseMap.ContainsKey(item.Key))
                 throw new InvalidOperationException(Properties.Resource.DUPLICATE_KEY);
@@ -111,10 +105,7 @@ namespace Collections.Generic
 
         #region Implementation of IPriorityQueueWithKeyMapping
         /// <inheritdoc/>
-        public bool ContainsKey(TK key)
-        {
-            return _reverseMap.ContainsKey(key);
-        }
+        public bool ContainsKey(TK key) => _reverseMap.ContainsKey(key);
 
         /// <inheritdoc/>
         public int Index(TK key)
@@ -124,10 +115,7 @@ namespace Collections.Generic
             return _reverseMap[key];
         }
 
-        KeyValuePair<TK, TV> IPriorityQueueWithKeyMapping<TK, TV>.Dequeue(TK key)
-        {
-            return RemoveByIndex(Index(key));
-        }
+        KeyValuePair<TK, TV> IPriorityQueueWithKeyMapping<TK, TV>.Dequeue(TK key) => RemoveByIndex(Index(key));
 
         void IPriorityQueueWithKeyMapping<TK, TV>.ChangePriority(TK oldKey, TK newKey)
         {
@@ -137,15 +125,9 @@ namespace Collections.Generic
         #endregion
 
         #region Explicit implementation of IPriorityQueueWithIndexing
-        KeyValuePair<TK, TV> IPriorityQueueWithIndexing<TK,TV>.Dequeue(int index)
-        {
-            return RemoveByIndex(index);
-        }
+        KeyValuePair<TK, TV> IPriorityQueueWithIndexing<TK,TV>.Dequeue(int index) => RemoveByIndex(index);
 
-        KeyValuePair<TK, TV> IPriorityQueueWithIndexing<TK,TV>.this[int index]
-        {
-            get { return this[index]; }
-        }
+        KeyValuePair<TK, TV> IPriorityQueueWithIndexing<TK,TV>.this[int index] => this[index];
 
         void IPriorityQueueWithIndexing<TK,TV>.ChangePriority(int index, TK newPriority)
         {

@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
+    <TargetFrameworks>net5.0;netstandard2.0;net40</TargetFrameworks>
     <AssemblyName>Collections</AssemblyName>
     <RootNamespace>Collections</RootNamespace>
-    <Version>4.1.0</Version>
+    <Version>5.0.0</Version>
     <Company>Pfeifers-Software</Company>
     <Authors>Juergen Pfeifer</Authors>
     <PackageProjectUrl>https://github.com/juergenpf/Collections</PackageProjectUrl>
@@ -16,7 +16,8 @@ not covered by the .NET base class library. At the moment this is just
 a BinaryHeap implementation with various variations, and based on that
 an implementation of a PriorityQueue.</Description>
     <PackageTags>Collections BinaryHeap PriorityQueue</PackageTags>
-    <PackageReleaseNotes>Version 3 drops PCL builds in favour of .NET standard</PackageReleaseNotes>
+    <PackageReleaseNotes>- Version 3 drops PCL builds in favour of .NET standard
+    - Version 5 supports net50 target framework</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>

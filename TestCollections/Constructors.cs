@@ -54,7 +54,7 @@ namespace TestCollections
         [ExpectedException(typeof (ArgumentOutOfRangeException))]
         public void InvalidCapacity()
         {
-            var o = new BinaryHeapWithReverseMap<int, string>(1);
+            _ = new BinaryHeapWithReverseMap<int, string>(1);
         }
 
         [TestMethod]
@@ -69,7 +69,7 @@ namespace TestCollections
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void InvalidCapacity2()
         {
-            var o = new BinaryHeapWithReverseMap<int, string>(SortOrder.Ascending,0);
+            _ = new BinaryHeapWithReverseMap<int, string>(SortOrder.Ascending, 0);
         }
 
         [TestMethod]

@@ -133,7 +133,7 @@ namespace Collections.Generic
         /// <param name="lhs">The left key</param>
         /// <param name="rhs">The right key</param>
         /// <returns>-1 if lhs less than rhs, 0 if lhs==rhs, 1 if lhs greater than rhs</returns>
-        protected int Compare(TK lhs, TK rhs)
+        private int Compare(TK lhs, TK rhs)
         {
             var res = lhs.CompareTo(rhs);
             if (SortOrder.Descending == _sortOrder)
@@ -184,7 +184,7 @@ namespace Collections.Generic
         /// Add a new element to the heap. If the capacity gets exceeded the heap will be expanded.
         /// </summary>
         /// <param name="item">The KeyValuePair to add to the heap.</param>
-        public virtual void Add(KeyValuePair<TK, TV> item)
+        protected virtual void Add(KeyValuePair<TK, TV> item)
         {
             if (IsFull)
                 ExpandHeap();
@@ -217,16 +217,14 @@ namespace Collections.Generic
             var x = this[Count];
             AssignToIndex(index, x);
             Count--;
-            if (index <= Count)
+            if (index > Count) return root;
+            if (index > 1 && Compare(x.Key, this[index / 2].Key) < 0)
             {
-                if (index > 1 && Compare(x.Key, this[index / 2].Key) < 0)
-                {
-                    PercolateUp(index);
-                }
-                else
-                {
-                    PercolateDown(index);
-                }
+                PercolateUp(index);
+            }
+            else
+            {
+                PercolateDown(index);
             }
             return root;
         }
@@ -250,11 +248,9 @@ namespace Collections.Generic
         {
             var root = this[1];
             var last = this[Count];
-            if (--Count > 0)
-            {
-                AssignToIndex(1, last);
-                PercolateDown(1);
-            }
+            if (--Count <= 0) return root;
+            AssignToIndex(1, last);
+            PercolateDown(1);
             return root;
         }
 

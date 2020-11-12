@@ -31,14 +31,6 @@ namespace Collections.Generic
         private readonly IndexReferencer _indexReferencer; // The callback to reference the index in the heap
 
         /// <summary>
-        /// Create a heap with a default capacity and ascending sort order.
-        /// </summary>
-        /// <param name="indexReferencer">The callback to store the heap-index</param>
-        public BinaryHeapWithCallback(IndexReferencer indexReferencer)
-            : this(indexReferencer, DefaultSortOrder, DefaultCapacity)
-        { }
-
-        /// <summary>
         /// Create a new heap with the specified sort order and default capacity.
         /// </summary>
         /// <param name="indexReferencer">The callback to store the heap-index</param>
@@ -54,7 +46,7 @@ namespace Collections.Generic
         /// <param name="sortOrder">The sort order (Ascending or Descending)</param>
         /// <param name="capacity"></param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown if the capacity is less than 2.</exception>
-        public BinaryHeapWithCallback(IndexReferencer indexReferencer, SortOrder sortOrder, int capacity)
+        public BinaryHeapWithCallback(IndexReferencer indexReferencer, SortOrder sortOrder = DefaultSortOrder, int capacity = DefaultCapacity)
             : base(sortOrder, capacity)
         {
             _indexReferencer = indexReferencer;
@@ -68,8 +60,7 @@ namespace Collections.Generic
         /// <exception cref="ArgumentOutOfRangeException">Thrown if the capacity is less than 2.</exception>
         public BinaryHeapWithCallback(IndexReferencer indexReferencer, int capacity)
             : this(indexReferencer, DefaultSortOrder, capacity)
-        {
-        }
+        { }
         #endregion
 
         /// <inheritdoc/>
@@ -89,10 +80,7 @@ namespace Collections.Generic
         /// <exception cref="IndexOutOfRangeException">May be thrown if the index is out of range</exception>
         /// <exception cref="KeyNotFoundException">May be thrown if the heap is empty</exception>
         /// <returns>The removed KeyValuePair</returns>
-        public KeyValuePair<TK, TV> Remove(int index)
-        {
-            return RemoveByIndex(index);
-        }
+        public KeyValuePair<TK, TV> Remove(int index) => RemoveByIndex(index);
 
         /// <summary>
         /// Get the KeyValuePair from the heap. An exception will be thrown if the element
@@ -102,10 +90,7 @@ namespace Collections.Generic
         /// <exception cref="KeyNotFoundException">May be thrown if the heap is empty</exception>
         /// <exception cref="IndexOutOfRangeException">May be thrown if the index is out of range</exception>
         /// <returns>The requested KeyValuePair</returns>
-        public KeyValuePair<TK, TV> Get(int index)
-        {
-            return this[index];
-        }
+        public KeyValuePair<TK, TV> Get(int index) => this[index];
 
         /// <summary>
         /// Change the key of an element on the heap.
@@ -120,15 +105,10 @@ namespace Collections.Generic
         }
 
         #region Implementation of IPriorityQueueWithIndexing
-        KeyValuePair<TK, TV> IPriorityQueueWithIndexing<TK,TV>.this[int index]
-        {
-            get { return this[index]; }
-        }
+        KeyValuePair<TK, TV> IPriorityQueueWithIndexing<TK,TV>.this[int index] => this[index];
 
-        KeyValuePair<TK, TV> IPriorityQueueWithIndexing<TK, TV>.Dequeue(int index)
-        {
-            return Remove(index);
-        }
+        KeyValuePair<TK, TV> IPriorityQueueWithIndexing<TK, TV>.Dequeue(int index) => Remove(index);
+
         #endregion
     }
 }

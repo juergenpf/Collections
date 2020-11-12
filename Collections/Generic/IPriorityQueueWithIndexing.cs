@@ -7,8 +7,9 @@ using System.Collections.Generic;
 namespace Collections.Generic
 {
     /// <summary>
-    /// This is an interface to an IPriorityKey, where the Caller has some intrinsic knowledge about
-    /// the internal index of elements on the queue and can use that index to operate on the queue
+    /// This is an interface to a Priority Queue, where the Caller has some
+    /// intrinsic knowledge about the internal index of elements on the queue
+    /// and can use that index to operate on the queue.
     /// </summary>
     /// <typeparam name="TK">The key type to use. Must implement IComparable`TK</typeparam>
     /// <typeparam name="TV">The value for the elements in the queue.</typeparam>

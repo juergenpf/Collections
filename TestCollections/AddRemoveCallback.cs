@@ -106,11 +106,11 @@ namespace TestCollections
             o1.Add(1,"A");
             var r = o1.Remove(2);
             Assert.IsNotNull(r);
-            Assert.AreEqual(r.Value.index,2);
+            Assert.AreEqual(r.Value.Index,2);
             Assert.AreEqual(o1.Count,2);
             var top = o1.Peek;
             Assert.IsNotNull(top);
-            Assert.AreEqual(top.Value.index,1);
+            Assert.AreEqual(top.Value.Index,1);
         }
 
         [TestMethod]
@@ -135,7 +135,7 @@ namespace TestCollections
             }
             var pick = o1.Remove(2);
             Assert.IsNotNull(pick);
-            Assert.AreEqual(pick.Value.index,2);
+            Assert.AreEqual(pick.Value.Index,2);
         }
 
         [TestMethod]
